@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.androidcodes.contactsexample.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/Theme.DesignDemo.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/Theme.DesignDemo.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <com.example.androidcodes.contactsexample.customviews.FloatingActionMenu
+        android:id="@+id/fam_options"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        app:menu_colorNormal="@color/fam_backgroundDark"
+        app:menu_colorPressed="@color/fam_background"
+        app:menu_fab_size="normal"
+        app:menu_icon="@drawable/option"
+        app:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        app:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        app:menu_labels_style="@style/MenuLabelsStyle"
+        app:menu_shadowColor="#444">
+
+        <com.example.androidcodes.contactsexample.customviews.FloatingActionButton
+            android:id="@+id/fab_sync"
+            style="@style/MenuSmallButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete"
+            app:fab_colorNormal="#3cadad"
+            app:fab_label="Sync"
+            app:fab_size="mini" />
+
+        <com.example.androidcodes.contactsexample.customviews.FloatingActionButton
+            android:id="@+id/fab_create_contact"
+            style="@style/MenuSmallButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete"
+            app:fab_colorNormal="#3cadad"
+            app:fab_label="Create"
+            app:fab_size="mini" />
+
+        <com.example.androidcodes.contactsexample.customviews.FloatingActionButton
+            android:id="@+id/fab_update_contact"
+            style="@style/MenuSmallButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete"
+            app:fab_colorNormal="#3cadad"
+            app:fab_label="Update"
+            app:fab_size="mini" />
+
+        <com.example.androidcodes.contactsexample.customviews.FloatingActionButton
+            android:id="@+id/fab_delete_contact"
+            style="@style/MenuSmallButtonsStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/delete"
+            app:fab_colorNormal="#3cadad"
+            app:fab_label="Delete"
+            app:fab_size="mini" />
+
+    </com.example.androidcodes.contactsexample.customviews.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>
